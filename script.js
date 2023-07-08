@@ -10,8 +10,7 @@ function showAlert(message){
 	alert(message);
 }
 
-
-// create move cards using elements of currentMovieStack array 
+// create movie cards using elements of currentMovieStack array 
 function renderList(actionForButton){
 	movieCardContainer.innerHTML = '';
 
@@ -70,8 +69,6 @@ getTrandingMovies();
 
 // when we clicked on home button this fetches trending movies and renders on web-page
 homeButton.addEventListener('click', getTrandingMovies);
-
-
 
 
 // search box event listner check for any key press and search the movie according and show on web-page
@@ -173,7 +170,7 @@ function renderMovieInDetail(movie){
 }
 
 
-// fetch the defails of of move and send it to renderMovieDetails to display
+// fetch the defails of movie and send it to renderMovieDetails to display
 function getMovieInDetail(element){
 
 	fetch(`https://api.themoviedb.org/3/movie/${element.getAttribute('id')}?api_key=cb213741fa9662c69add38c5a59c0110&language=en-US`)
